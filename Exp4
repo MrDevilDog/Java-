@@ -1,0 +1,20 @@
+import java.io.*;
+import javax.servlet.*;
+public class FirstServlet extends GenericServlet
+
+{
+public void service(ServletRequest req,
+ServletResponse resp)
+throws ServletException, IOException
+{
+resp.setContentType(&quot;text/html&quot;);
+PrintWriter pw = resp.getWriter();
+pw.println(&quot;&lt;html&gt;&quot;);
+pw.println(&quot;&lt;head&gt;&lt;title&gt;My first Servlet&lt;/title&gt;&lt;/head&gt;&quot;);
+pw.println(&quot;&lt;body&gt;&quot;);
+pw.println(&quot;&lt;h2&gt;Welcome To Servlet World!&lt;/h2&gt;&quot;);
+pw.println(&quot;&lt;/body&gt;&quot;);
+pw.println(&quot;&lt;/html&gt;&quot;);
+pw.close();
+}
+}
